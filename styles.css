@@ -105,3 +105,45 @@ nav {
 .active-tab {
     color: var(--white);
 }
+
+/* Card Styles */
+.card-section {
+    border-radius: 15px;
+}
+
+.card-main {
+    background-color: var(--navy-900);
+    border-radius: 15px;
+    padding: var(--spacing-400) var(--spacing-300);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-100);
+}
+
+.card-main div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-main p {
+    margin: 0;
+}
+
+.task-name {
+    color: var(--white);
+    font-weight: 500;
+}
+
+.task-duration {
+    color: var(--white);
+    font-size: 32px;
+    line-height: 38px;
+    font-weight: 300;
+}
+
+.task-last {
+    color: var(--navy-200);
+    font-size: 15px;
+    line-height: 18px;
+}
