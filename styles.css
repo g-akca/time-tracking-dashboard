@@ -106,9 +106,23 @@ nav {
     color: var(--white);
 }
 
-/* Card Styles */
+/* General Card Styles */
 .card-section {
     border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-header {
+    height: 38px;
+}
+
+.card-header img {
+    width: 78px;
+    position: absolute;
+    z-index: 0;
+    right: var(--spacing-200);
+    top: -11px;
 }
 
 .card-main {
@@ -118,6 +132,8 @@ nav {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-100);
+    position: relative;
+    z-index: 1;
 }
 
 .card-main div {
@@ -146,4 +162,29 @@ nav {
     color: var(--navy-200);
     font-size: 15px;
     line-height: 18px;
+}
+
+/* Individual Card Styles */
+.card-section#work {
+    background-color: var(--orange-300);
+}
+
+.card-section#play {
+    background-color: var(--blue-300);
+}
+
+.card-section#study {
+    background-color: var(--pink-400);
+}
+
+.card-section#exercise {
+    background-color: var(--green-400);
+}
+
+.card-section#social {
+    background-color: var(--purple-700);
+}
+
+.card-section#self-care {
+    background-color: var(--yellow-300);
 }
