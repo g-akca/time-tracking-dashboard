@@ -115,6 +115,11 @@ nav {
     color: var(--purple-500);
     cursor: pointer;
     padding: 0;
+    transition: color 0.3s ease;
+}
+
+#nav-list button:hover {
+    color: #a5a8cb;
 }
 
 #nav-list button.active-tab {
@@ -150,6 +155,7 @@ nav {
     gap: var(--spacing-200);
     position: relative;
     z-index: 1;
+    transition: background-color 0.3s ease;
 }
 
 .card-main:hover {
@@ -164,6 +170,16 @@ nav {
 
 .card-main p {
     margin: 0;
+}
+
+.card-main svg {
+    color: #BBC0FF;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.card-main svg:hover {
+    color: white;
 }
 
 .task-name {
