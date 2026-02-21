@@ -102,10 +102,22 @@ nav {
     margin: 0;
     padding: 0;
     text-align: center;
-    color: var(--purple-500);
 }
 
-.active-tab {
+#nav-list button {
+    background-color: transparent;
+    border: none;
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    color: var(--purple-500);
+    cursor: pointer;
+    padding: 0;
+}
+
+#nav-list button.active-tab {
     color: var(--white);
 }
 
@@ -138,6 +150,10 @@ nav {
     gap: var(--spacing-200);
     position: relative;
     z-index: 1;
+}
+
+.card-main:hover {
+    background-color: var(--navy-800);
 }
 
 .card-main div {
