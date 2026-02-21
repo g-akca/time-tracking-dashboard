@@ -26,6 +26,7 @@
 /* General Styles */
 body {
     min-height: 100vh;
+    box-sizing: border-box;
     padding: var(--spacing-300);
     margin: 0;
     display: flex;
@@ -113,6 +114,8 @@ nav {
     border-radius: 15px;
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .card-header {
@@ -129,6 +132,7 @@ nav {
     background-color: var(--navy-900);
     border-radius: 15px;
     padding: var(--spacing-300);
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: var(--spacing-200);
@@ -230,6 +234,15 @@ nav {
         padding: var(--spacing-300) 20%;
     }
 
+    #user-info p#user-name {
+        font-size: 40px;
+        line-height: 47px;
+    }
+
+    .card-header {
+        height: 33px;
+    }
+
     .card-main div:last-of-type {
         flex-direction: column;
         align-items: start;
@@ -243,5 +256,61 @@ nav {
     .task-duration {
         font-size: 56px;
         line-height: 66px;
+    }
+}
+
+/* Desktop Responsive Styles */
+@media screen and (min-width: 769px) {
+    main {
+        max-width: 1116px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: "header work play study"
+        "header exercise social self-care";
+        gap: var(--spacing-400);
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    #user-div {
+        flex-direction: column;
+        gap: var(--spacing-500);
+        flex: 1;
+    }
+
+    #user-img {
+        width: 78px;
+    }
+
+    #user-info {
+        gap: 0;
+    }
+
+    nav {
+        padding: var(--spacing-400);
+    }
+
+    #nav-list {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 21px;
+        justify-content: space-between;
+        text-align: start;
+    }
+
+    .card-header {
+        height: 45px;
+    }
+
+    .card-main {
+        padding: var(--spacing-400);
+        gap: var(--spacing-300);
+    }
+
+    .card-main img {
+        width: 21px;
     }
 }
