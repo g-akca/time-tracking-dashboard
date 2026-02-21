@@ -43,6 +43,7 @@ body {
 main {
     display: grid;
     grid-template-columns: 1fr;
+    grid-template-areas: "header" "work" "play" "study" "exercise" "social" "self-care";
     gap: var(--spacing-300);
 }
 
@@ -51,6 +52,7 @@ header {
     width: 100%;
     background-color: var(--navy-900);
     border-radius: 15px;
+    grid-area: header;
 }
 
 #user-div {
@@ -126,10 +128,10 @@ nav {
 .card-main {
     background-color: var(--navy-900);
     border-radius: 15px;
-    padding: var(--spacing-400) var(--spacing-300);
+    padding: var(--spacing-300);
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-100);
+    gap: var(--spacing-200);
     position: relative;
     z-index: 1;
 }
@@ -165,6 +167,7 @@ nav {
 /* Individual Card Styles */
 #work {
     background-color: var(--orange-300);
+    grid-area: work;
 }
 
 #work .card-header img {
@@ -173,6 +176,7 @@ nav {
 
 #play {
     background-color: var(--blue-300);
+    grid-area: play;
 }
 
 #play .card-header img {
@@ -181,6 +185,7 @@ nav {
 
 #study {
     background-color: var(--pink-400);
+    grid-area: study;
 }
 
 #study .card-header img {
@@ -189,10 +194,12 @@ nav {
 
 #exercise {
     background-color: var(--green-400);
+    grid-area: exercise;
 }
 
 #social {
     background-color: var(--purple-700);
+    grid-area: social;
 }
 
 #social .card-header img {
@@ -201,8 +208,40 @@ nav {
 
 #self-care {
     background-color: var(--yellow-300);
+    grid-area: self-care;
 }
 
 #self-care .card-header img {
     top: -12px;
+}
+
+/* Tablet Responsive Styles */
+@media screen and (min-width: 376px) {
+    main {
+        width: 100%;
+        max-width: 612px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "header header header"
+        "work play study"
+        "exercise social self-care";
+    }
+
+    nav {
+        padding: var(--spacing-300) 20%;
+    }
+
+    .card-main div:last-of-type {
+        flex-direction: column;
+        align-items: start;
+        gap: var(--spacing-100);
+    }
+
+    .card-main img {
+        width: 16px;
+    }
+
+    .task-duration {
+        font-size: 56px;
+        line-height: 66px;
+    }
 }
