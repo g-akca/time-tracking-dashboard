@@ -252,7 +252,7 @@ nav {
 }
 
 /* Tablet Responsive Styles */
-@media screen and (min-width: 376px) {
+@media screen and (min-width: 768px) {
     main {
         width: 100%;
         max-width: 612px;
@@ -292,7 +292,7 @@ nav {
 }
 
 /* Desktop Responsive Styles */
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1440px) {
     main {
         max-width: 1116px;
         grid-template-columns: 1fr 1fr 1fr 1fr;
